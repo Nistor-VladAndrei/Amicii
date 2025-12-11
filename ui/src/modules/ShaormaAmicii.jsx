@@ -138,7 +138,13 @@ const ShaormaAmicii = () => {
       name: 'Pitești',
       address: 'Shaorma Amicii, Bulevardul Frații Golești 57, Pitești 110174',
       schedule: 'Luni-Duminică 11:00 - 22:30',
-      mapLink: 'https://www.google.com/maps/search/?api=1&query=Pitesti'
+      mapLink: 'https://share.google/rzg6b5kDmIrbR0ilP'
+    },
+    {
+      name: 'Craiova',
+      address: 'Shaorma Amicii, Strada Alexandru Ioan Cuza 42, Craiova 200339',
+      schedule: 'Luni-Duminică 11:00 - 22:30',
+      mapLink: 'https://maps.app.goo.gl/1EcATKKdEhdYVs8NA'
     }
   ];
 
@@ -224,7 +230,7 @@ const ShaormaAmicii = () => {
           {/* Main CTAs with liquid glass */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center mb-6 sm:mb-10 w-full px-2">
             <button
-              onClick={() => setCurrentPage('menu')}
+              onClick={() => { setCurrentPage('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="glass-button px-12 py-6 rounded-full text-xl font-bold text-white transform hover:scale-110 transition-all"
             >
               Vezi Meniul 📋
@@ -361,7 +367,7 @@ const ShaormaAmicii = () => {
             <div className="inline-block relative">
               <div className="absolute inset-0 blur-xl bg-gradient-to-r from-orange-500 to-red-600 opacity-50"></div>
               <button
-                onClick={() => setCurrentPage('menu')}
+                onClick={() => { setCurrentPage('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 className="relative glass-button px-10 py-5 rounded-full font-bold text-xl text-white hover:scale-110 transition-all brand-text shadow-2xl"
               >
                 Vezi Tot Meniul 📋
@@ -714,7 +720,7 @@ const ShaormaAmicii = () => {
               <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="text-white hover:text-orange-400 transition-colors font-medium">
                 Home
               </button>
-              <button onClick={() => setCurrentPage('menu')} className="text-white hover:text-orange-400 transition-colors font-medium">
+              <button onClick={() => { setCurrentPage('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-white hover:text-orange-400 transition-colors font-medium">
                 Meniu
               </button>
               <a href="#locations" className="text-white hover:text-orange-400 transition-colors font-medium" onClick={() => setCurrentPage('home')}>
@@ -776,7 +782,7 @@ const ShaormaAmicii = () => {
               <button onClick={() => { setCurrentPage('home'); setIsMenuOpen(false); window.scrollTo(0, 0); }} className="text-white hover:text-orange-400 transition-colors font-medium text-left">
                 Home
               </button>
-              <button onClick={() => { setCurrentPage('menu'); setIsMenuOpen(false); }} className="text-white hover:text-orange-400 transition-colors font-medium text-left">
+              <button onClick={() => { setCurrentPage('menu'); setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-white hover:text-orange-400 transition-colors font-medium text-left">
                 Meniu
               </button>
               <a href="#locations" className="text-white hover:text-orange-400 transition-colors font-medium" onClick={() => { setCurrentPage('home'); setIsMenuOpen(false); }}>
@@ -876,7 +882,7 @@ const ShaormaAmicii = () => {
                 <button onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }} className="block text-gray-400 hover:text-orange-400 transition-colors">
                   Home
                 </button>
-                <button onClick={() => setCurrentPage('menu')} className="block text-gray-400 hover:text-orange-400 transition-colors">
+                <button onClick={() => { setCurrentPage('menu'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block text-gray-400 hover:text-orange-400 transition-colors">
                   Meniu
                 </button>
                 <a href="#locations" className="block text-gray-400 hover:text-orange-400 transition-colors" onClick={() => setCurrentPage('home')}>
